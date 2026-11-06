@@ -1,0 +1,44 @@
+{
+  "id": "youtube-music",
+  "name": "YouTube Music · Lyrics+",
+  "version": "0.2.0",
+  "main": "index.js",
+  "playback": "stream",
+  "permissions": {
+    "network": [
+      "music.youtube.com",
+      "s.youtube.com",
+      "api.betterlyrics.org",
+      "lrclib.net"
+    ],
+    "process": true
+  },
+  "settings": [
+    {
+      "key": "programs",
+      "label": "Programs Folder",
+      "help": "Where ffmpeg is, and yt-dlp if you have it, if they aren't in /opt/homebrew/bin, /usr/local/bin or on the PATH."
+    }
+  ],
+  "navigation": [
+    {
+      "builtin": "home"
+    },
+    {
+      "title": "Charts",
+      "page": "charts",
+      "icon": "chart"
+    },
+    {
+      "title": "New Releases",
+      "page": "new",
+      "icon": "star"
+    },
+    {
+      "builtin": "stations"
+    },
+    {
+      "builtin": "liked"
+    }
+  ]
+}

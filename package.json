@@ -1,0 +1,14 @@
+{
+  "name": "mygo-music-youtube-lyrics",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "YouTube Music plugin for MyGo Music with reliable timed-lyrics fallbacks",
+  "repository": "github:10416606/mygo-music-youtube-lyrics",
+  "scripts": {
+    "check": "node --check index.js && node scripts/check-manifest.mjs",
+    "test": "node test/lyrics.test.mjs",
+    "package": "python3 scripts/package.py"
+  },
+  "engines": { "node": ">=22" }
+}

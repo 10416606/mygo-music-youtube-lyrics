@@ -28,4 +28,9 @@ jobs:
       - name: Publish release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$RELEASE_TAG" dist/plugin.zip --title "$RELEASE_TAG" --notes-file RELEASE_NOTES.md
+        run: |
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            gh release upload "$RELEASE_TAG" dist/plugin.zip --clobber
+          else
+            gh release create "$RELEASE_TAG" dist/plugin.zip --title "$RELEASE_TAG" --notes-file RELEASE_NOTES.md
+          fi
